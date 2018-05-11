@@ -20,6 +20,15 @@ class DashboardContainer extends Container {
 	constructor() {
 		super();
 		this.currencyHistoryCache = new Map();
+
+		console.log(appContainer);
+		// This fails because appContainer is undefined, however it's defined in
+		// other methods???
+		// appContainer.subscribe(() => {
+		// 	if (!appContainer.state.enabledCoins.includes(this.state.activeView)) {
+		// 		this.setActiveView('Portfolio');
+		// 	}
+		// });
 	}
 
 	setActiveView = activeView => {
